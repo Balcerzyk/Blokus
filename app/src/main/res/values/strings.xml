@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Blokus</string>
+    <string name="play">Play</string>
+    <string name="exit">Exit</string>
+    <string name="title_activity_game">GameActivity</string>
+    <string name="title_activity_test">test</string>
+</resources>
