@@ -9,17 +9,19 @@ public class Field {
     private int positionY;
     private float topLeftX;
     private float topLeftY;
+    private float height;
+    private float width;
 
     Field(int x, int y){
         positionX = x;
         positionY = y;
 
-        DisplayMetrics displayMetrics = Resources.getSystem().getDisplayMetrics();
-        float dpHeight = displayMetrics.heightPixels / displayMetrics.density;
-        float dpWidth = displayMetrics.widthPixels / displayMetrics.density;
+        height = 30;
+        width = 30;
 
-        topLeftX = x * 30 * displayMetrics.density;
-        topLeftY = y * 30 * displayMetrics.density;
+        DisplayMetrics displayMetrics = Resources.getSystem().getDisplayMetrics();
+        topLeftX = x * height * displayMetrics.density;
+        topLeftY = y * width * displayMetrics.density;
     }
 
     public int getPositionX() {
@@ -36,5 +38,13 @@ public class Field {
 
     public float getTopLeftY() {
         return topLeftY;
+    }
+
+    public float getHeight() {
+        return height;
+    }
+
+    public float getWidth() {
+        return width;
     }
 }
