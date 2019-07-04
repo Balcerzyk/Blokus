@@ -1004,8 +1004,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/game_playGround"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/game_playGround" />
 
     <Button
         android:id="@+id/rightButton"
@@ -1015,11 +1014,11 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:onClick="setActiveBlock"
         android:text="@string/next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/block0"
-        android:onClick="setActiveBlock"
         app:layout_constraintTop_toBottomOf="@+id/game_playGround" />
 
     <Button
@@ -1030,11 +1029,11 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:onClick="setActiveBlock"
         android:text="@string/previous"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/block0"
         app:layout_constraintStart_toStartOf="parent"
-        android:onClick="setActiveBlock"
         app:layout_constraintTop_toBottomOf="@+id/game_playGround" />
 
 

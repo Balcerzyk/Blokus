@@ -16,13 +16,22 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class GameActivity extends AppCompatActivity implements View.OnTouchListener {
     BigField bigField = new BigField();
     int activeBlockInt = 0;
-    String playername = "red";
+    String[] playerColors = {"red", "blue", "yellow", "green"};
+    int playerId = 0;
+    String currPlayer = "red";
+    int currBlockId = 0;
+    Field currentField;
+
+
+    DisplayMetrics displayMetrics = new DisplayMetrics();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,19 +46,28 @@ public class GameActivity extends AppCompatActivity implements View.OnTouchListe
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (currentField != null) {
+                    ImageView block = findViewById(R.id.block0);
+                    setEmpty(currentField, currPlayer, currBlockId);
 
+                    playerId++;
+                    if (playerId == 4) playerId = 0;
+                    currPlayer = playerColors[playerId];
+
+                    getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+                    block.getLayoutParams().width = (int) (30 * displayMetrics.density);
+                    block.getLayoutParams().height = (int) (30 * displayMetrics.density);
+                    block.setImageResource(getResources().getIdentifier(currPlayer + "1", "drawable", getPackageName()));
+                }
             }
         });
 
-            View game = findViewById(R.id.game_layout);
-            game.setOnTouchListener(this);
-
-        //Player redPlayer = new Player("red");
+        View game = findViewById(R.id.game_layout);
+        game.setOnTouchListener(this);
 
     }
 
     public void setActiveBlock(View view) {
-        DisplayMetrics displayMetrics = Resources.getSystem().getDisplayMetrics();
         switch(view.getId()) {
             case R.id.leftButton:
                 if(activeBlockInt != 0) activeBlockInt--;
@@ -61,34 +79,43 @@ public class GameActivity extends AppCompatActivity implements View.OnTouchListe
         }
 
         ImageView block = findViewById(R.id.block0);
+        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+        int width = displayMetrics.widthPixels;
+
+        block.setX(width/2);
+        block.setY(findViewById(R.id.rightButton).getY());
+        block.animate()
+                .x(block.getX())
+                .y(block.getY())
+                .setDuration(0)
+                .start();
+        String player = currPlayer;
         switch(activeBlockInt){
-            case 0: block.getLayoutParams().width = (int)(30 * displayMetrics.density); block.getLayoutParams().height = (int)(30 * displayMetrics.density) ; block.setImageResource(R.drawable.red1); break;
-            case 1: block.getLayoutParams().width = (int)(30 * displayMetrics.density); block.getLayoutParams().height = (int)(60 * displayMetrics.density) ; block.setImageResource(R.drawable.red2); break;
-            case 2: block.getLayoutParams().width = (int)(60 * displayMetrics.density); block.getLayoutParams().height = (int)(60 * displayMetrics.density) ; block.setImageResource(R.drawable.red3); break;
-            case 3: block.getLayoutParams().width = (int)(30 * displayMetrics.density); block.getLayoutParams().height = (int)(30 * displayMetrics.density) ; block.setImageResource(R.drawable.red1); break;
-            case 4: block.getLayoutParams().width = (int)(30 * displayMetrics.density); block.getLayoutParams().height = (int)(60 * displayMetrics.density) ; block.setImageResource(R.drawable.red2); break;
-            case 5: block.getLayoutParams().width = (int)(60 * displayMetrics.density); block.getLayoutParams().height = (int)(60 * displayMetrics.density) ; block.setImageResource(R.drawable.red3); break;
-            case 6: block.getLayoutParams().width = (int)(30 * displayMetrics.density); block.getLayoutParams().height = (int)(30 * displayMetrics.density) ; block.setImageResource(R.drawable.red1); break;
-            case 7: block.getLayoutParams().width = (int)(30 * displayMetrics.density); block.getLayoutParams().height = (int)(60 * displayMetrics.density) ; block.setImageResource(R.drawable.red2); break;
+            case 0: block.getLayoutParams().width = (int)(30 * displayMetrics.density); block.getLayoutParams().height = (int)(30 * displayMetrics.density) ; block.setImageResource(getResources().getIdentifier(player + "1", "drawable", getPackageName())); currBlockId = 0; break;
+            case 1: block.getLayoutParams().width = (int)(30 * displayMetrics.density); block.getLayoutParams().height = (int)(60 * displayMetrics.density) ; block.setImageResource(getResources().getIdentifier(player + "2", "drawable", getPackageName())); currBlockId = 1; break;
+            case 2: block.getLayoutParams().width = (int)(60 * displayMetrics.density); block.getLayoutParams().height = (int)(60 * displayMetrics.density) ; block.setImageResource(getResources().getIdentifier(player + "3", "drawable", getPackageName())); currBlockId = 2; break;
+            case 3: block.getLayoutParams().width = (int)(30 * displayMetrics.density); block.getLayoutParams().height = (int)(30 * displayMetrics.density) ; block.setImageResource(getResources().getIdentifier(player + "1", "drawable", getPackageName())); currBlockId = 3; break;
+            case 4: block.getLayoutParams().width = (int)(30 * displayMetrics.density); block.getLayoutParams().height = (int)(60 * displayMetrics.density) ; block.setImageResource(getResources().getIdentifier(player + "2", "drawable", getPackageName())); currBlockId = 4; break;
+            case 5: block.getLayoutParams().width = (int)(60 * displayMetrics.density); block.getLayoutParams().height = (int)(60 * displayMetrics.density) ; block.setImageResource(getResources().getIdentifier(player + "3", "drawable", getPackageName())); currBlockId = 5; break;
+            case 6: block.getLayoutParams().width = (int)(30 * displayMetrics.density); block.getLayoutParams().height = (int)(30 * displayMetrics.density) ; block.setImageResource(getResources().getIdentifier(player + "1", "drawable", getPackageName())); currBlockId = 6; break;
+            case 7: block.getLayoutParams().width = (int)(30 * displayMetrics.density); block.getLayoutParams().height = (int)(60 * displayMetrics.density) ; block.setImageResource(getResources().getIdentifier(player + "2", "drawable", getPackageName())); currBlockId = 7; break;
 
         }
+    }
 
-
-
-
+    public void setEmpty(Field field, String playerColor, int currentBlockId){
+        bigField.setEmpty(field);
+        String paint = "imageView" + field.getPositionX() + field.getPositionY();
+        int imageViewId = getResources().getIdentifier(paint, "id", getPackageName());
+        ImageView imageView = findViewById(imageViewId);
+        imageView.setImageResource(getResources().getIdentifier(playerColor + "1", "drawable", getPackageName()));
     }
 
     @Override
     public boolean onTouch(View v, MotionEvent event) {
-
-
-        Log.v("222222", Integer.toString(v.getId()));
-        //if(activeBlock == "") return false;
-
-        //int id = getResources().getIdentifier(activeBlock, "id", getPackageName());
         DisplayMetrics displayMetrics = Resources.getSystem().getDisplayMetrics();
         ImageView activeBlockImg = findViewById(R.id.block0);
-        Field currentField;
+
 
         float clickX = event.getX();
         float clickY = event.getY();

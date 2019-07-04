@@ -11,6 +11,7 @@ public class Field {
     private float topLeftY;
     private float height;
     private float width;
+    public boolean isEmpty;
 
     Field(int x, int y){
         positionX = x;
@@ -22,6 +23,8 @@ public class Field {
         DisplayMetrics displayMetrics = Resources.getSystem().getDisplayMetrics();
         topLeftX = x * height * displayMetrics.density;
         topLeftY = y * width * displayMetrics.density;
+
+        isEmpty = true;
     }
 
     public int getPositionX() {
