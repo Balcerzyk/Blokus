@@ -34,4 +34,8 @@ public class BigField {
         field.isEmpty = false;
 
     }
+    public void setEmpty(int x, int y){
+        fields[x][y].isEmpty = false;
+
+    }
 }
