@@ -1003,8 +1003,10 @@
         android:src="@drawable/red1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/game_playGround" />
+        app:layout_constraintTop_toBottomOf="@+id/game_playGround"
+        app:layout_constraintVertical_bias="0.298" />
 
     <Button
         android:id="@+id/rightButton"
@@ -1018,8 +1020,10 @@
         android:text="@string/next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toEndOf="@+id/block0"
-        app:layout_constraintTop_toBottomOf="@+id/game_playGround" />
+        app:layout_constraintTop_toBottomOf="@+id/game_playGround"
+        app:layout_constraintVertical_bias="0.285" />
 
     <Button
         android:id="@+id/leftButton"
@@ -1034,7 +1038,51 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/block0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/game_playGround" />
+        app:layout_constraintTop_toBottomOf="@+id/game_playGround"
+        app:layout_constraintVertical_bias="0.285" />
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/pointsRed"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:background="@color/red"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/pointsBlue"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:background="@color/blue"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/pointsYellow"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:background="@color/yellow"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/pointsGreen"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:background="@color/green"
+            android:textAlignment="center"/>
+    </TableRow>
 
 
 </android.support.constraint.ConstraintLayout>

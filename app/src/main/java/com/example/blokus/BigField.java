@@ -38,4 +38,9 @@ public class BigField {
         fields[x][y].isEmpty = false;
 
     }
+    public boolean checkEmpty(int x, int y){
+        Log.v("big", Boolean.toString(fields[x][y].isEmpty));
+        return fields[x][y].isEmpty;
+
+    }
 }
