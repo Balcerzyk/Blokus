@@ -11,6 +11,8 @@ public class Field {
     private float topLeftY;
     private float height;
     private float width;
+    private float centerX;
+    private float centerY;
     public boolean isEmpty;
 
     Field(int x, int y){
@@ -21,8 +23,11 @@ public class Field {
         width = 30;
 
         DisplayMetrics displayMetrics = Resources.getSystem().getDisplayMetrics();
-        topLeftX = x * height * displayMetrics.density;
-        topLeftY = y * width * displayMetrics.density;
+        topLeftX = x * height * displayMetrics.density + 16 * displayMetrics.density;
+        topLeftY = y * width * displayMetrics.density + 16 * displayMetrics.density;
+
+        centerX = topLeftX + 15 * displayMetrics.density;
+        centerY = topLeftY + 15 * displayMetrics.density;
 
         isEmpty = true;
     }
@@ -49,5 +54,13 @@ public class Field {
 
     public float getWidth() {
         return width;
+    }
+
+    public float getCenterX() {
+        return centerX;
+    }
+
+    public float getCenterY() {
+        return centerY;
     }
 }

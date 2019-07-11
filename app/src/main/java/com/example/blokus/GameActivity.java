@@ -18,6 +18,7 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -31,6 +32,7 @@ public class GameActivity extends AppCompatActivity implements View.OnTouchListe
     String currPlayer = "red";
     int currBlockId = 0;
     Field currentField;
+    int rotation = 0;
 
     Player red = new Player("red");
     Player blue = new Player("blue");
@@ -49,54 +51,6 @@ public class GameActivity extends AppCompatActivity implements View.OnTouchListe
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                if (collision(currBlockId, currentField)) {
-
-                    Toolbar toolbar = findViewById(R.id.toolbar);
-                    setEmpty(currentField, currPlayer, currBlockId);
-
-                    switch(currPlayer){
-                        case "red":
-                            red.deleteBlock(currBlockId);
-                            changePlayer(red, blue, yellow, green);
-                            toolbar.setBackgroundColor(getResources().getColor(R.color.blue));
-                            break;
-                        case "blue":
-                            blue.deleteBlock(currBlockId);
-                            changePlayer(blue, yellow, green, red);
-                            toolbar.setBackgroundColor(getResources().getColor(R.color.yellow));
-                            break;
-                        case "yellow":
-                            yellow.deleteBlock(currBlockId);
-                            changePlayer(yellow, green, red, blue);
-                            toolbar.setBackgroundColor(getResources().getColor(R.color.green));
-                            break;
-                        case "green":
-                            green.deleteBlock(currBlockId);
-                            changePlayer(green, red, blue, yellow);
-                            toolbar.setBackgroundColor(getResources().getColor(R.color.red));
-                            break;
-                    }
-                    TextView pointsRed = findViewById(R.id.pointsRed);
-                    TextView pointsBlue = findViewById(R.id.pointsBlue);
-                    TextView pointsYellow = findViewById(R.id.pointsYellow);
-                    TextView pointsGreen = findViewById(R.id.pointsGreen);
-
-                    pointsRed.setText(Integer.toString(red.points));
-                    pointsBlue.setText(Integer.toString(blue.points));
-                    pointsYellow.setText(Integer.toString(yellow.points));
-                    pointsGreen.setText(Integer.toString(green.points));
-
-                }
-            }
-        });
-
-
 
         View game = findViewById(R.id.game_layout);
         game.setOnTouchListener(this);
@@ -204,12 +158,9 @@ public class GameActivity extends AppCompatActivity implements View.OnTouchListe
             case 7: neighbourX.add(0); neighbourY.add(0); neighbourX.add(0); neighbourY.add(1); neighbourX.add(1); neighbourY.add(1); neighbourX.add(1); neighbourY.add(2); neighbourX.add(2); neighbourY.add(2); break;
         }
         for(int i=0; i<neighbourX.size(); i++) {
-            Log.v("xxxxxxxx", Integer.toString(field.getPositionX() + (int) neighbourX.get(i)));
-            Log.v("yyyyyyyy", Integer.toString(field.getPositionY() + (int) neighbourY.get(i)));
             if(bigField.checkEmpty(field.getPositionX() + (int) neighbourX.get(i), field.getPositionY() + (int) neighbourY.get(i))) continue;
             else return false;
         }
-        Log.v("fff", "wyszlo");
         return true;
     }
 
@@ -217,6 +168,15 @@ public class GameActivity extends AppCompatActivity implements View.OnTouchListe
         bigField.setEmpty(field);
         ArrayList neighbourX = new ArrayList();
         ArrayList neighbourY = new ArrayList();
+
+        int x = 0;
+        int y = 0;
+        switch(rotation){
+            case 0: x = 0; y = 0; break;
+            case 90: x = -1; y = -1; break;
+            case 180: x = 0; y = -2; break;
+            case 270: x = 1; y = -1; break;
+        }
         
         switch(currentBlockId){
             case 0: neighbourX.add(0); neighbourY.add(0); break;
@@ -260,7 +220,8 @@ public class GameActivity extends AppCompatActivity implements View.OnTouchListe
                 i++;
             }
 
-
+            block.setRotation(block.getRotation()- rotation);
+            rotation = 0;
             currBlockId = 0;
             if (!nextPlayer.blocks[currBlockId]) {
                 while (currBlockId != 7 && !nextPlayer.blocks[currBlockId + 1]) currBlockId++;
@@ -275,7 +236,19 @@ public class GameActivity extends AppCompatActivity implements View.OnTouchListe
     }
 
     public void end(){
+        int max = red.points;
+        String champion = "Red";
+        if (blue.points > max) {max = blue.points; champion = "Blue";}
+        if (yellow.points > max) {max = yellow.points; champion = "Yellow";}
+        if (green.points > max) {champion = "Green";}
+
         Intent endIntent = new Intent(GameActivity.this, EndActivity.class);
+        endIntent.putExtra("key1","Red " + Integer.toString(red.points));
+        endIntent.putExtra("key2","Blue " + Integer.toString(blue.points));
+        endIntent.putExtra("key3","Yellow " + Integer.toString(yellow.points));
+        endIntent.putExtra("key4","Green " + Integer.toString(green.points));
+        endIntent.putExtra("key5", champion);
+        finish();
         startActivity(endIntent);
     }
 
@@ -294,19 +267,19 @@ public class GameActivity extends AppCompatActivity implements View.OnTouchListe
                 break;
             case MotionEvent.ACTION_MOVE:
                 activeBlockImg.animate()
-                        .x(clickX - (activeBlockImg.getWidth() / 2))
-                        .y(clickY - (activeBlockImg.getHeight() / 2))
+                        .x(clickX - 15 * displayMetrics.density)
+                        .y(clickY - 15 * displayMetrics.density)
                         .setDuration(0)
                         .start();
                 break;
             case MotionEvent.ACTION_UP:
-                currentField = bigField.searchField(clickX, clickY);
+                currentField = bigField.searchField(clickX, clickY, currBlockId);
                 if (currentField != null) {
-                    activeBlockImg.setX(currentField.getTopLeftX() + (currentField.getWidth() / 2) * displayMetrics.density );
-                    activeBlockImg.setY(currentField.getTopLeftY() + (currentField.getHeight() / 2) * displayMetrics.density-60);
+                    activeBlockImg.setX(currentField.getTopLeftX());
+                    activeBlockImg.setY(currentField.getTopLeftY());
                     activeBlockImg.animate()
-                            .x(activeBlockImg.getX())
-                            .y(activeBlockImg.getY())
+                            .x(currentField.getTopLeftX())
+                            .y(currentField.getTopLeftY())
                             .setDuration(0)
                             .start();
                 }
@@ -319,5 +292,76 @@ public class GameActivity extends AppCompatActivity implements View.OnTouchListe
                 return false;
         }
         return true;
+    }
+
+    public void nextPlayer(View view) {
+        if (collision(currBlockId, currentField)) {
+
+            Toolbar toolbar = findViewById(R.id.toolbar);
+            Window window = getWindow();
+            setEmpty(currentField, currPlayer, currBlockId);
+
+            switch(currPlayer){
+                case "red":
+                    red.deleteBlock(currBlockId);
+                    changePlayer(red, blue, yellow, green);
+                    toolbar.setBackgroundColor(getResources().getColor(R.color.blue));
+                    window.setStatusBarColor(getResources().getColor(R.color.blue));
+                    break;
+                case "blue":
+                    blue.deleteBlock(currBlockId);
+                    changePlayer(blue, yellow, green, red);
+                    toolbar.setBackgroundColor(getResources().getColor(R.color.yellow));
+                    window.setStatusBarColor(getResources().getColor(R.color.yellow));
+                    break;
+                case "yellow":
+                    yellow.deleteBlock(currBlockId);
+                    changePlayer(yellow, green, red, blue);
+                    toolbar.setBackgroundColor(getResources().getColor(R.color.green));
+                    window.setStatusBarColor(getResources().getColor(R.color.green));
+                    break;
+                case "green":
+                    green.deleteBlock(currBlockId);
+                    changePlayer(green, red, blue, yellow);
+                    toolbar.setBackgroundColor(getResources().getColor(R.color.red));
+                    window.setStatusBarColor(getResources().getColor(R.color.red));
+                    break;
+            }
+            TextView pointsRed = findViewById(R.id.pointsRed);
+            TextView pointsBlue = findViewById(R.id.pointsBlue);
+            TextView pointsYellow = findViewById(R.id.pointsYellow);
+            TextView pointsGreen = findViewById(R.id.pointsGreen);
+
+            pointsRed.setText(Integer.toString(red.points));
+            pointsBlue.setText(Integer.toString(blue.points));
+            pointsYellow.setText(Integer.toString(yellow.points));
+            pointsGreen.setText(Integer.toString(green.points));
+
+        }
+    }
+
+    public void pass(View view) {
+        switch(currPlayer){
+            case "red": red.finish = true; changePlayer(red, blue, yellow, green); break;
+            case "blue": blue.finish = true; changePlayer(blue, yellow, green, red); break;
+            case "yellow": yellow.finish = true;  changePlayer(yellow, green, red, blue); break;
+            case "green": green.finish = true;  changePlayer(yellow, green, blue, yellow); break;
+        }
+    }
+
+    public void rotate(View view) {
+        ImageView block = findViewById(R.id.block0);
+                switch(view.getId()){
+                    case R.id.rotateRight:
+                        block.setRotation(block.getRotation()+ 90);
+                        rotation += 90;
+                        if(rotation == 360) rotation = 0;
+                        break;
+                    case R.id.rotateLeft:
+                        block.setRotation(block.getRotation()- 90);
+                        rotation -= 90;
+                        if(rotation == -90) rotation = 270;
+                        break;
+                }
     }
 }

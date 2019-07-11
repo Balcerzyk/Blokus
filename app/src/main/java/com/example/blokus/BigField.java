@@ -18,7 +18,8 @@ public class BigField {
         }
     }
 
-    public Field searchField(float x, float y){
+    public Field searchField(float x, float y, int blockId){
+
         if(y > fields[10][10].getTopLeftY() + 200) return null;
         for(int i = 0; i <= 10; i++){
             if(i == 10 || (x >= fields[i][0].getTopLeftX() && x < fields[i+1][0].getTopLeftX())){

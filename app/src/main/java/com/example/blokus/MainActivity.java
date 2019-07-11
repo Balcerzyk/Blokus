@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.exitButton:
                         finish();
-                        System.exit(0);
+                        moveTaskToBack(true);
                         break;
                     default:;
                 }
