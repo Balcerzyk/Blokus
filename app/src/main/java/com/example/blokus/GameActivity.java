@@ -146,18 +146,28 @@ public class GameActivity extends AppCompatActivity implements View.OnTouchListe
     public boolean collision(int currentBlockId, Field field){
         ArrayList neighbourX = new ArrayList();
         ArrayList neighbourY = new ArrayList();
+        ArrayList blocks = setPos(currentBlockId, rotation);
 
-        switch(currentBlockId){
-            case 0: neighbourX.add(0); neighbourY.add(0); break;
-            case 1: neighbourX.add(0); neighbourY.add(0); neighbourX.add(0); neighbourY.add(1); break;
-            case 2: neighbourX.add(0); neighbourY.add(0); neighbourX.add(0); neighbourY.add(1); neighbourX.add(1); neighbourY.add(0); break;
-            case 3: neighbourX.add(0); neighbourY.add(0); neighbourX.add(0); neighbourY.add(1); neighbourX.add(1); neighbourY.add(0); neighbourX.add(1); neighbourY.add(-1); break;
-            case 4: neighbourX.add(0); neighbourY.add(0); neighbourX.add(0); neighbourY.add(1); neighbourX.add(1); neighbourY.add(0); neighbourX.add(1); neighbourY.add(1); break;
-            case 5: neighbourX.add(0); neighbourY.add(0); neighbourX.add(0); neighbourY.add(1); neighbourX.add(0); neighbourY.add(2); neighbourX.add(0); neighbourY.add(3); break;
-            case 6: neighbourX.add(0); neighbourY.add(0); neighbourX.add(0); neighbourY.add(1); neighbourX.add(2); neighbourY.add(0); neighbourX.add(1); neighbourY.add(1); neighbourX.add(2); neighbourY.add(1);  break;
-            case 7: neighbourX.add(0); neighbourY.add(0); neighbourX.add(0); neighbourY.add(1); neighbourX.add(1); neighbourY.add(1); neighbourX.add(1); neighbourY.add(2); neighbourX.add(2); neighbourY.add(2); break;
+        for(int i=0; i<blocks.size(); i++){
+            switch((int) blocks.get(i)){
+                case 0: neighbourX.add(0); neighbourY.add(0); break;
+                case 1: neighbourX.add(1); neighbourY.add(0); break;
+                case 2: neighbourX.add(2); neighbourY.add(0); break;
+                case 3: neighbourX.add(0); neighbourY.add(1); break;
+                case 4: neighbourX.add(1); neighbourY.add(1); break;
+                case 5: neighbourX.add(2); neighbourY.add(1); break;
+                case 6: neighbourX.add(0); neighbourY.add(2); break;
+                case 7: neighbourX.add(1); neighbourY.add(2); break;
+                case 8: neighbourX.add(2); neighbourY.add(2); break;
+                case 9: neighbourX.add(0); neighbourY.add(3); break;
+                case 10: neighbourX.add(3); neighbourY.add(0); break;
+
+            }
         }
+
         for(int i=0; i<neighbourX.size(); i++) {
+            if((field.getPositionX() + (int) neighbourX.get(i)) < 0 || (field.getPositionX() + (int) neighbourX.get(i)) > 10
+                    || (field.getPositionY() + (int) neighbourY.get(i)) < 0 || (field.getPositionY() + (int) neighbourY.get(i)) > 10) return false;
             if(bigField.checkEmpty(field.getPositionX() + (int) neighbourX.get(i), field.getPositionY() + (int) neighbourY.get(i))) continue;
             else return false;
         }
@@ -168,33 +178,89 @@ public class GameActivity extends AppCompatActivity implements View.OnTouchListe
         bigField.setEmpty(field);
         ArrayList neighbourX = new ArrayList();
         ArrayList neighbourY = new ArrayList();
+        ArrayList blocks = setPos(currentBlockId, rotation);
 
-        int x = 0;
-        int y = 0;
-        switch(rotation){
-            case 0: x = 0; y = 0; break;
-            case 90: x = -1; y = -1; break;
-            case 180: x = 0; y = -2; break;
-            case 270: x = 1; y = -1; break;
+
+        for(int i=0; i<blocks.size(); i++){
+            switch((int) blocks.get(i)){
+                case 0: neighbourX.add(0); neighbourY.add(0); break;
+                case 1: neighbourX.add(1); neighbourY.add(0); break;
+                case 2: neighbourX.add(2); neighbourY.add(0); break;
+                case 3: neighbourX.add(0); neighbourY.add(1); break;
+                case 4: neighbourX.add(1); neighbourY.add(1); break;
+                case 5: neighbourX.add(2); neighbourY.add(1); break;
+                case 6: neighbourX.add(0); neighbourY.add(2); break;
+                case 7: neighbourX.add(1); neighbourY.add(2); break;
+                case 8: neighbourX.add(2); neighbourY.add(2); break;
+                case 9: neighbourX.add(0); neighbourY.add(3); break;
+                case 10: neighbourX.add(3); neighbourY.add(0); break;
+            }
         }
-        
-        switch(currentBlockId){
-            case 0: neighbourX.add(0); neighbourY.add(0); break;
-            case 1: neighbourX.add(0); neighbourY.add(0); neighbourX.add(0); neighbourY.add(1); break;
-            case 2: neighbourX.add(0); neighbourY.add(0); neighbourX.add(0); neighbourY.add(1); neighbourX.add(1); neighbourY.add(0); break;
-            case 3: neighbourX.add(0); neighbourY.add(0); neighbourX.add(0); neighbourY.add(1); neighbourX.add(1); neighbourY.add(0); neighbourX.add(1); neighbourY.add(-1); break;
-            case 4: neighbourX.add(0); neighbourY.add(0); neighbourX.add(0); neighbourY.add(1); neighbourX.add(1); neighbourY.add(0); neighbourX.add(1); neighbourY.add(1); break;
-            case 5: neighbourX.add(0); neighbourY.add(0); neighbourX.add(0); neighbourY.add(1); neighbourX.add(0); neighbourY.add(2); neighbourX.add(0); neighbourY.add(3); break;
-            case 6: neighbourX.add(0); neighbourY.add(0); neighbourX.add(0); neighbourY.add(1); neighbourX.add(2); neighbourY.add(0); neighbourX.add(1); neighbourY.add(1); neighbourX.add(2); neighbourY.add(1);  break;
-            case 7: neighbourX.add(0); neighbourY.add(0); neighbourX.add(0); neighbourY.add(1); neighbourX.add(1); neighbourY.add(1); neighbourX.add(1); neighbourY.add(2); neighbourX.add(2); neighbourY.add(2); break;
-        }
-        for(int i=0; i<neighbourX.size(); i++) {
+
+        for(int i=0; i<blocks.size(); i++) {
             bigField.setEmpty(field.getPositionX() + (int) neighbourX.get(i), field.getPositionY() + (int) neighbourY.get(i));
             String paint = "imageView" + (field.getPositionX() + (int) neighbourX.get(i)) + (field.getPositionY() + (int) neighbourY.get(i));
             int imageViewId = getResources().getIdentifier(paint, "id", getPackageName());
             ImageView imageView = findViewById(imageViewId);
             imageView.setImageResource(getResources().getIdentifier(playerColor + "1", "drawable", getPackageName()));
         }
+    }
+
+    public ArrayList setPos(int blockId, int rot){
+        ArrayList blocks = new ArrayList();
+        switch(blockId){
+            case 0: blocks.add(0); break;
+            case 1:
+                switch(rot){
+                    case 0 : blocks.add(0); blocks.add(3); break;
+                    case 90 : blocks.add(0); blocks.add(1); break;
+                    case 180 : blocks.add(0); blocks.add(3); break;
+                    case 270 : blocks.add(0); blocks.add(1); break;
+                }
+                break;
+            case 2:
+                switch(rot){
+                    case 0 : blocks.add(0); blocks.add(1); blocks.add(3);break;
+                    case 90 : blocks.add(0); blocks.add(1); blocks.add(4);break;
+                    case 180 : blocks.add(1); blocks.add(3); blocks.add(4);break;
+                    case 270 : blocks.add(0); blocks.add(3); blocks.add(4);break;
+                }
+                break;
+            case 3:
+                switch(rot){
+                    case 0 : blocks.add(1); blocks.add(3); blocks.add(4); blocks.add(6); break;
+                    case 90 : blocks.add(0); blocks.add(1); blocks.add(4); blocks.add(5); break;
+                    case 180 : blocks.add(1); blocks.add(3); blocks.add(4); blocks.add(6); break;
+                    case 270 : blocks.add(0); blocks.add(1); blocks.add(4); blocks.add(5); break;
+                }
+                break;
+            case 4: blocks.add(0); blocks.add(1); blocks.add(3); blocks.add(4); break;
+            case 5:
+                switch(rot){
+                    case 0 : blocks.add(0); blocks.add(3); blocks.add(6); blocks.add(9); break;
+                    case 90 : blocks.add(0); blocks.add(1); blocks.add(2); blocks.add(10); break;
+                    case 180 : blocks.add(0); blocks.add(3); blocks.add(6); blocks.add(9); break;
+                    case 270 : blocks.add(0); blocks.add(1); blocks.add(2); blocks.add(10); break;
+                }
+                break;
+            case 6:
+                switch(rot){
+                    case 0 : blocks.add(0); blocks.add(2); blocks.add(3); blocks.add(4); blocks.add(5); break;
+                    case 90 : blocks.add(0); blocks.add(1); blocks.add(3); blocks.add(6); blocks.add(7); break;
+                    case 180 : blocks.add(0); blocks.add(1); blocks.add(2); blocks.add(3); blocks.add(5); break;
+                    case 270 : blocks.add(0); blocks.add(1); blocks.add(4); blocks.add(6); blocks.add(7); break;
+                }
+                break;
+            case 7:
+                switch(rot){
+                    case 0 : blocks.add(0); blocks.add(3); blocks.add(4); blocks.add(7); blocks.add(8); break;
+                    case 90 : blocks.add(1); blocks.add(2); blocks.add(3); blocks.add(4); blocks.add(6); break;
+                    case 180 : blocks.add(0); blocks.add(1); blocks.add(4); blocks.add(5); blocks.add(8); break;
+                    case 270 : blocks.add(2); blocks.add(4); blocks.add(5); blocks.add(6); blocks.add(7); break;
+                }
+                break;
+        }
+        return blocks;
     }
 
     public void changePlayer(Player player, Player nextPlayer, Player nnPlayer, Player nnnPlayer){
@@ -274,12 +340,14 @@ public class GameActivity extends AppCompatActivity implements View.OnTouchListe
                 break;
             case MotionEvent.ACTION_UP:
                 currentField = bigField.searchField(clickX, clickY, currBlockId);
+                float []correction = {0, 0};
+                if(rotation == 90 || rotation == 270) correction = setCorrection(currBlockId);
                 if (currentField != null) {
-                    activeBlockImg.setX(currentField.getTopLeftX());
-                    activeBlockImg.setY(currentField.getTopLeftY());
+                    activeBlockImg.setX(currentField.getTopLeftX() + correction[0]);
+                    activeBlockImg.setY(currentField.getTopLeftY() + correction[0]);
                     activeBlockImg.animate()
-                            .x(currentField.getTopLeftX())
-                            .y(currentField.getTopLeftY())
+                            .x(currentField.getTopLeftX() + correction[0])
+                            .y(currentField.getTopLeftY() + correction[0])
                             .setDuration(0)
                             .start();
                 }
@@ -351,7 +419,7 @@ public class GameActivity extends AppCompatActivity implements View.OnTouchListe
 
     public void rotate(View view) {
         ImageView block = findViewById(R.id.block0);
-                switch(view.getId()){
+        switch(view.getId()){
                     case R.id.rotateRight:
                         block.setRotation(block.getRotation()+ 90);
                         rotation += 90;
@@ -363,5 +431,41 @@ public class GameActivity extends AppCompatActivity implements View.OnTouchListe
                         if(rotation == -90) rotation = 270;
                         break;
                 }
+        float []correction = {0, 0};
+        if(rotation == 90 || rotation == 270) correction = setCorrection(currBlockId);
+        block.setX(currentField.getTopLeftX() + correction[0]);
+        block.setY(currentField.getTopLeftY() + correction[1]);
+        block.animate()
+                .x(currentField.getTopLeftX() + correction[0])
+                .y(currentField.getTopLeftY() + correction[1])
+                .setDuration(0)
+                .start();
+    }
+
+    public float []setCorrection(int blockId){
+        float []xy = {0, 0};
+        switch (blockId){
+            case 0: break;
+            case 1:
+                xy[0] = currentField.getWidth()/2 * displayMetrics.density;
+                xy[1] = -currentField.getHeight()/2 * displayMetrics.density;
+                return xy;
+            case 2: break;
+            case 3:
+                xy[0] = currentField.getWidth()/2 * displayMetrics.density;
+                xy[1] = -currentField.getHeight()/2 * displayMetrics.density;
+                return xy;
+            case 4: break;
+            case 5:
+                xy[0] = 3*currentField.getWidth()/2 * displayMetrics.density;
+                xy[1] = -3*currentField.getHeight()/2 * displayMetrics.density;
+                break;
+            case 6:
+                xy[0] = -currentField.getWidth()/2 * displayMetrics.density;
+                xy[1] = currentField.getHeight()/2 * displayMetrics.density;
+                break;
+            case 7:
+        }
+        return xy;
     }
 }

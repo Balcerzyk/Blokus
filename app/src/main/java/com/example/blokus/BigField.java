@@ -40,7 +40,7 @@ public class BigField {
 
     }
     public boolean checkEmpty(int x, int y){
-        Log.v("big", Boolean.toString(fields[x][y].isEmpty));
+        if(fields[x][y] == null) return false;
         return fields[x][y].isEmpty;
 
     }
