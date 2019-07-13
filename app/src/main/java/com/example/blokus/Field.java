@@ -11,9 +11,8 @@ public class Field {
     private float topLeftY;
     private float height;
     private float width;
-    private float centerX;
-    private float centerY;
     public boolean isEmpty;
+    public String color;
 
     Field(int x, int y){
         positionX = x;
@@ -26,10 +25,8 @@ public class Field {
         topLeftX = x * height * displayMetrics.density + 16 * displayMetrics.density;
         topLeftY = y * width * displayMetrics.density + 16 * displayMetrics.density;
 
-        centerX = topLeftX + 15 * displayMetrics.density;
-        centerY = topLeftY + 15 * displayMetrics.density;
-
         isEmpty = true;
+        color = "a";
     }
 
     public int getPositionX() {
@@ -56,11 +53,4 @@ public class Field {
         return width;
     }
 
-    public float getCenterX() {
-        return centerX;
-    }
-
-    public float getCenterY() {
-        return centerY;
-    }
 }

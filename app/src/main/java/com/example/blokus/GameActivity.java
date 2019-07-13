@@ -88,11 +88,14 @@ public class GameActivity extends AppCompatActivity implements View.OnTouchListe
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         int width = displayMetrics.widthPixels;
 
+        int widthBlock = block.getMeasuredWidth();
+        int heightBlock = block.getMeasuredHeight();
+
         block.setX(width/2);
         block.setY(findViewById(R.id.rightButton).getY());
         block.animate()
-                .x(block.getX())
-                .y(block.getY())
+                .x(block.getX() - widthBlock)
+                .y(block.getY() - heightBlock)
                 .setDuration(0)
                 .start();
 
@@ -165,6 +168,28 @@ public class GameActivity extends AppCompatActivity implements View.OnTouchListe
             }
         }
 
+        int x;
+        int y;
+        boolean isOk = false;
+
+        for(int i=0; i<neighbourX.size(); i++) {
+            x = field.getPositionX() + (int) neighbourX.get(i);
+            y = field.getPositionY() + (int) neighbourY.get(i);
+            if((x == 0 && y == 0) || (x == 0 && y == 10) || (x == 10 && y == 0) || (x == 10 && y == 10)) isOk = true;
+
+            if(x-1 >= 0 && bigField.getFields(x-1, y).color == currPlayer) return false;
+            if(x+1 < 11 && bigField.getFields(x+1, y).color == currPlayer) return false;
+            if(y-1 >= 0 && bigField.getFields(x, y-1).color == currPlayer) return false;
+            if(y+1 < 11 && bigField.getFields(x, y+1).color == currPlayer) return false;
+
+            if(x-1 >= 0 && y-1 >= 0 && bigField.getFields(x-1, y-1).color == currPlayer) isOk = true;
+            if(x-1 >= 0 && y+1 < 11 && bigField.getFields(x-1, y+1).color == currPlayer) isOk = true;
+            if(x+1 < 11 && y-1 >= 0 && bigField.getFields(x+1, y-1).color == currPlayer) isOk = true;
+            if(x+1 < 11 && y+1 < 11 && bigField.getFields(x+1, y+1).color == currPlayer) {Log.v("PPPPPPPPPPPP", "LEEEL"); isOk = true;}
+
+        }
+
+        if(!isOk) return false;
         for(int i=0; i<neighbourX.size(); i++) {
             if((field.getPositionX() + (int) neighbourX.get(i)) < 0 || (field.getPositionX() + (int) neighbourX.get(i)) > 10
                     || (field.getPositionY() + (int) neighbourY.get(i)) < 0 || (field.getPositionY() + (int) neighbourY.get(i)) > 10) return false;
@@ -175,7 +200,7 @@ public class GameActivity extends AppCompatActivity implements View.OnTouchListe
     }
 
     public void setEmpty(Field field, String playerColor, int currentBlockId){
-        bigField.setEmpty(field);
+
         ArrayList neighbourX = new ArrayList();
         ArrayList neighbourY = new ArrayList();
         ArrayList blocks = setPos(currentBlockId, rotation);
@@ -198,7 +223,10 @@ public class GameActivity extends AppCompatActivity implements View.OnTouchListe
         }
 
         for(int i=0; i<blocks.size(); i++) {
-            bigField.setEmpty(field.getPositionX() + (int) neighbourX.get(i), field.getPositionY() + (int) neighbourY.get(i));
+            Log.v("ustawiamX: ", Integer.toString(field.getPositionX() + (int) neighbourX.get(i)));
+            Log.v("ustawiamY: ", Integer.toString(field.getPositionY() + (int) neighbourY.get(i)));
+
+            bigField.setEmpty(field.getPositionX() + (int) neighbourX.get(i), field.getPositionY() + (int) neighbourY.get(i), currPlayer);
             String paint = "imageView" + (field.getPositionX() + (int) neighbourX.get(i)) + (field.getPositionY() + (int) neighbourY.get(i));
             int imageViewId = getResources().getIdentifier(paint, "id", getPackageName());
             ImageView imageView = findViewById(imageViewId);
@@ -340,14 +368,15 @@ public class GameActivity extends AppCompatActivity implements View.OnTouchListe
                 break;
             case MotionEvent.ACTION_UP:
                 currentField = bigField.searchField(clickX, clickY, currBlockId);
+                Log.v("5555555", currentField. color);
                 float []correction = {0, 0};
                 if(rotation == 90 || rotation == 270) correction = setCorrection(currBlockId);
                 if (currentField != null) {
                     activeBlockImg.setX(currentField.getTopLeftX() + correction[0]);
-                    activeBlockImg.setY(currentField.getTopLeftY() + correction[0]);
+                    activeBlockImg.setY(currentField.getTopLeftY() + correction[1]);
                     activeBlockImg.animate()
                             .x(currentField.getTopLeftX() + correction[0])
-                            .y(currentField.getTopLeftY() + correction[0])
+                            .y(currentField.getTopLeftY() + correction[1])
                             .setDuration(0)
                             .start();
                 }
@@ -468,4 +497,5 @@ public class GameActivity extends AppCompatActivity implements View.OnTouchListe
         }
         return xy;
     }
+
 }

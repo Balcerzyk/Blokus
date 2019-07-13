@@ -31,17 +31,21 @@ public class BigField {
         return null;
     }
 
-    public void setEmpty(Field field){
+    public void setEmpty(Field field, String playerColor){
         field.isEmpty = false;
+        field.color = playerColor;
 
     }
-    public void setEmpty(int x, int y){
+    public void setEmpty(int x, int y, String playerColor){
         fields[x][y].isEmpty = false;
-
+        fields[x][y].color = playerColor;
     }
     public boolean checkEmpty(int x, int y){
         if(fields[x][y] == null) return false;
         return fields[x][y].isEmpty;
 
+    }
+    public Field getFields(int x, int y){
+        return fields[x][y];
     }
 }
