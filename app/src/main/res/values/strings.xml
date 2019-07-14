@@ -7,6 +7,8 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
     <string name="title_activity_end">EndActivity</string>
-    <string name="ready">Ready</string>
     <string name="pass">Pass</string>
+    <string name="done">Done</string>
+    <string name="rotate_left">Rotate  Left</string>
+    <string name="rotate_right">Rotate Right</string>
 </resources>

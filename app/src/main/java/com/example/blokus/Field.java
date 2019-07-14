@@ -26,7 +26,7 @@ public class Field {
         topLeftY = y * width * displayMetrics.density + 16 * displayMetrics.density;
 
         isEmpty = true;
-        color = "a";
+        color = null;
     }
 
     public int getPositionX() {

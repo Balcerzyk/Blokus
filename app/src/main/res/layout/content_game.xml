@@ -10,1132 +10,1137 @@
     tools:showIn="@layout/activity_game">
 
 
-        <ImageView
-            android:id="@+id/imageView103"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView93"
-            app:layout_constraintTop_toBottomOf="@+id/imageView102" />
-
-        <ImageView
-            android:id="@+id/imageView102"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView92"
-            app:layout_constraintTop_toBottomOf="@+id/imageView101" />
-
-        <ImageView
-            android:id="@+id/imageView105"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView95"
-            app:layout_constraintTop_toBottomOf="@+id/imageView104" />
-
-        <ImageView
-            android:id="@+id/imageView104"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView94"
-            app:layout_constraintTop_toBottomOf="@+id/imageView103" />
-
-        <ImageView
-            android:id="@+id/imageView106"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView96"
-            app:layout_constraintTop_toBottomOf="@+id/imageView105" />
-
-        <ImageView
-            android:id="@+id/imageView108"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView98"
-            app:layout_constraintTop_toBottomOf="@+id/imageView107" />
-
-        <ImageView
-            android:id="@+id/imageView1010"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView910"
-            app:layout_constraintTop_toBottomOf="@+id/imageView109" />
-
-        <ImageView
-            android:id="@+id/imageView107"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView97"
-            app:layout_constraintTop_toBottomOf="@+id/imageView106" />
-
-        <ImageView
-            android:id="@+id/imageView109"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView99"
-            app:layout_constraintTop_toBottomOf="@+id/imageView108" />
-
-        <ImageView
-            android:id="@+id/imageView100"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="16dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView90"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/imageView101"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView91"
-            app:layout_constraintTop_toBottomOf="@+id/imageView100" />
-
-        <ImageView
-            android:id="@+id/imageView98"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView88"
-            app:layout_constraintTop_toBottomOf="@+id/imageView97" />
-
-        <ImageView
-            android:id="@+id/imageView97"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView87"
-            app:layout_constraintTop_toBottomOf="@+id/imageView96" />
-
-        <ImageView
-            android:id="@+id/imageView99"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView89"
-            app:layout_constraintTop_toBottomOf="@+id/imageView98" />
-
-        <ImageView
-            android:id="@+id/imageView910"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView810"
-            app:layout_constraintTop_toBottomOf="@+id/imageView99" />
-
-        <ImageView
-            android:id="@+id/imageView96"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView86"
-            app:layout_constraintTop_toBottomOf="@+id/imageView95" />
-
-        <ImageView
-            android:id="@+id/imageView95"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView85"
-            app:layout_constraintTop_toBottomOf="@+id/imageView94" />
-
-        <ImageView
-            android:id="@+id/imageView93"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView83"
-            app:layout_constraintTop_toBottomOf="@+id/imageView92" />
-
-        <ImageView
-            android:id="@+id/imageView94"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView84"
-            app:layout_constraintTop_toBottomOf="@+id/imageView93" />
-
-        <ImageView
-            android:id="@+id/imageView90"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="16dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView80"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/imageView91"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView81"
-            app:layout_constraintTop_toBottomOf="@+id/imageView90" />
-
-        <ImageView
-            android:id="@+id/imageView92"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView82"
-            app:layout_constraintTop_toBottomOf="@+id/imageView91" />
-
-        <ImageView
-            android:id="@+id/imageView86"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView76"
-            app:layout_constraintTop_toBottomOf="@+id/imageView85" />
-
-        <ImageView
-            android:id="@+id/imageView83"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView73"
-            app:layout_constraintTop_toBottomOf="@+id/imageView82" />
-
-        <ImageView
-            android:id="@+id/imageView810"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView710"
-            app:layout_constraintTop_toBottomOf="@+id/imageView89" />
-
-        <ImageView
-            android:id="@+id/imageView81"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView71"
-            app:layout_constraintTop_toBottomOf="@+id/imageView80" />
-
-        <ImageView
-            android:id="@+id/imageView82"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView72"
-            app:layout_constraintTop_toBottomOf="@+id/imageView81" />
-
-        <ImageView
-            android:id="@+id/imageView88"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView78"
-            app:layout_constraintTop_toBottomOf="@+id/imageView87" />
-
-        <ImageView
-            android:id="@+id/imageView80"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="16dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView70"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/imageView84"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView74"
-            app:layout_constraintTop_toBottomOf="@+id/imageView83" />
-
-        <ImageView
-            android:id="@+id/imageView85"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView75"
-            app:layout_constraintTop_toBottomOf="@+id/imageView84" />
-
-        <ImageView
-            android:id="@+id/imageView87"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView77"
-            app:layout_constraintTop_toBottomOf="@+id/imageView86" />
-
-        <ImageView
-            android:id="@+id/imageView89"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView79"
-            app:layout_constraintTop_toBottomOf="@+id/imageView88" />
-
-        <ImageView
-            android:id="@+id/imageView74"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView64"
-            app:layout_constraintTop_toBottomOf="@+id/imageView73" />
-
-        <ImageView
-            android:id="@+id/imageView71"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView61"
-            app:layout_constraintTop_toBottomOf="@+id/imageView70" />
-
-        <ImageView
-            android:id="@+id/imageView77"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView67"
-            app:layout_constraintTop_toBottomOf="@+id/imageView76" />
-
-        <ImageView
-            android:id="@+id/imageView72"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView62"
-            app:layout_constraintTop_toBottomOf="@+id/imageView71" />
-
-        <ImageView
-            android:id="@+id/imageView710"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView610"
-            app:layout_constraintTop_toBottomOf="@+id/imageView79" />
-
-        <ImageView
-            android:id="@+id/imageView73"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView63"
-            app:layout_constraintTop_toBottomOf="@+id/imageView72" />
-
-        <ImageView
-            android:id="@+id/imageView70"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="16dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView60"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/imageView78"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView68"
-            app:layout_constraintTop_toBottomOf="@+id/imageView77" />
-
-        <ImageView
-            android:id="@+id/imageView75"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView65"
-            app:layout_constraintTop_toBottomOf="@+id/imageView74" />
-
-        <ImageView
-            android:id="@+id/imageView76"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView66"
-            app:layout_constraintTop_toBottomOf="@+id/imageView75" />
-
-        <ImageView
-            android:id="@+id/imageView79"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView69"
-            app:layout_constraintTop_toBottomOf="@+id/imageView78" />
-
-        <ImageView
-            android:id="@+id/imageView63"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView53"
-            app:layout_constraintTop_toBottomOf="@+id/imageView62" />
-
-        <ImageView
-            android:id="@+id/imageView60"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="16dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView50"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/imageView69"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView59"
-            app:layout_constraintTop_toBottomOf="@+id/imageView68" />
-
-        <ImageView
-            android:id="@+id/imageView610"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView510"
-            app:layout_constraintTop_toBottomOf="@+id/imageView69" />
-
-        <ImageView
-            android:id="@+id/imageView64"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView54"
-            app:layout_constraintTop_toBottomOf="@+id/imageView63" />
-
-        <ImageView
-            android:id="@+id/imageView66"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView56"
-            app:layout_constraintTop_toBottomOf="@+id/imageView65" />
-
-        <ImageView
-            android:id="@+id/imageView68"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView58"
-            app:layout_constraintTop_toBottomOf="@+id/imageView67" />
-
-        <ImageView
-            android:id="@+id/imageView65"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView55"
-            app:layout_constraintTop_toBottomOf="@+id/imageView64" />
-
-        <ImageView
-            android:id="@+id/imageView67"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView57"
-            app:layout_constraintTop_toBottomOf="@+id/imageView66" />
-
-        <ImageView
-            android:id="@+id/imageView61"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView51"
-            app:layout_constraintTop_toBottomOf="@+id/imageView60" />
-
-        <ImageView
-            android:id="@+id/imageView62"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView52"
-            app:layout_constraintTop_toBottomOf="@+id/imageView61" />
-
-        <ImageView
-            android:id="@+id/imageView58"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView48"
-            app:layout_constraintTop_toBottomOf="@+id/imageView57" />
-
-        <ImageView
-            android:id="@+id/imageView55"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView45"
-            app:layout_constraintTop_toBottomOf="@+id/imageView54" />
-
-        <ImageView
-            android:id="@+id/imageView52"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView42"
-            app:layout_constraintTop_toBottomOf="@+id/imageView51" />
-
-        <ImageView
-            android:id="@+id/imageView57"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView47"
-            app:layout_constraintTop_toBottomOf="@+id/imageView56" />
-
-        <ImageView
-            android:id="@+id/imageView53"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView43"
-            app:layout_constraintTop_toBottomOf="@+id/imageView52" />
-
-        <ImageView
-            android:id="@+id/imageView56"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView46"
-            app:layout_constraintTop_toBottomOf="@+id/imageView55" />
-
-        <ImageView
-            android:id="@+id/imageView51"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView41"
-            app:layout_constraintTop_toBottomOf="@+id/imageView50" />
-
-        <ImageView
-            android:id="@+id/imageView50"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="16dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView40"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/imageView59"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView49"
-            app:layout_constraintTop_toBottomOf="@+id/imageView58" />
-
-        <ImageView
-            android:id="@+id/imageView510"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView410"
-            app:layout_constraintTop_toBottomOf="@+id/imageView59" />
-
-        <ImageView
-            android:id="@+id/imageView54"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView44"
-            app:layout_constraintTop_toBottomOf="@+id/imageView53" />
-
-        <ImageView
-            android:id="@+id/imageView47"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView37"
-            app:layout_constraintTop_toBottomOf="@+id/imageView46" />
-
-        <ImageView
-            android:id="@+id/imageView41"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView31"
-            app:layout_constraintTop_toBottomOf="@+id/imageView40" />
-
-        <ImageView
-            android:id="@+id/imageView49"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView39"
-            app:layout_constraintTop_toBottomOf="@+id/imageView48" />
-
-        <ImageView
-            android:id="@+id/imageView45"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView35"
-            app:layout_constraintTop_toBottomOf="@+id/imageView44" />
-
-        <ImageView
-            android:id="@+id/imageView40"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="16dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView30"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/imageView410"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView310"
-            app:layout_constraintTop_toBottomOf="@+id/imageView49" />
-
-        <ImageView
-            android:id="@+id/imageView44"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView34"
-            app:layout_constraintTop_toBottomOf="@+id/imageView43" />
-
-        <ImageView
-            android:id="@+id/imageView43"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView33"
-            app:layout_constraintTop_toBottomOf="@+id/imageView42" />
-
-        <ImageView
-            android:id="@+id/imageView46"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView36"
-            app:layout_constraintTop_toBottomOf="@+id/imageView45" />
-
-        <ImageView
-            android:id="@+id/imageView48"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView38"
-            app:layout_constraintTop_toBottomOf="@+id/imageView47" />
-
-        <ImageView
-            android:id="@+id/imageView42"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView32"
-            app:layout_constraintTop_toBottomOf="@+id/imageView41" />
-
-        <ImageView
-            android:id="@+id/imageView30"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="16dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView20"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/imageView31"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView21"
-            app:layout_constraintTop_toBottomOf="@+id/imageView30" />
-
-        <ImageView
-            android:id="@+id/imageView32"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView22"
-            app:layout_constraintTop_toBottomOf="@+id/imageView31" />
-
-        <ImageView
-            android:id="@+id/imageView33"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView23"
-            app:layout_constraintTop_toBottomOf="@+id/imageView32" />
-
-        <ImageView
-            android:id="@+id/imageView34"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView24"
-            app:layout_constraintTop_toBottomOf="@+id/imageView33" />
-
-        <ImageView
-            android:id="@+id/imageView35"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView25"
-            app:layout_constraintTop_toBottomOf="@+id/imageView34" />
-
-        <ImageView
-            android:id="@+id/imageView36"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView26"
-            app:layout_constraintTop_toBottomOf="@+id/imageView35" />
-
-        <ImageView
-            android:id="@+id/imageView37"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView27"
-            app:layout_constraintTop_toBottomOf="@+id/imageView36" />
-
-        <ImageView
-            android:id="@+id/imageView38"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView28"
-            app:layout_constraintTop_toBottomOf="@+id/imageView37" />
-
-        <ImageView
-            android:id="@+id/imageView39"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView29"
-            app:layout_constraintTop_toBottomOf="@+id/imageView38" />
-
-        <ImageView
-            android:id="@+id/imageView310"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView210"
-            app:layout_constraintTop_toBottomOf="@+id/imageView39" />
-
-        <ImageView
-            android:id="@+id/imageView20"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="16dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView10"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/imageView21"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView11"
-            app:layout_constraintTop_toBottomOf="@+id/imageView20" />
-
-        <ImageView
-            android:id="@+id/imageView22"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView12"
-            app:layout_constraintTop_toBottomOf="@+id/imageView21" />
-
-        <ImageView
-            android:id="@+id/imageView23"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView13"
-            app:layout_constraintTop_toBottomOf="@+id/imageView22" />
-
-        <ImageView
-            android:id="@+id/imageView24"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView14"
-            app:layout_constraintTop_toBottomOf="@+id/imageView23" />
-
-        <ImageView
-            android:id="@+id/imageView25"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView15"
-            app:layout_constraintTop_toBottomOf="@+id/imageView24" />
-
-        <ImageView
-            android:id="@+id/imageView26"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView16"
-            app:layout_constraintTop_toBottomOf="@+id/imageView25" />
-
-        <ImageView
-            android:id="@+id/imageView27"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView17"
-            app:layout_constraintTop_toBottomOf="@+id/imageView26" />
-
-        <ImageView
-            android:id="@+id/imageView28"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView18"
-            app:layout_constraintTop_toBottomOf="@+id/imageView27" />
-
-        <ImageView
-            android:id="@+id/imageView29"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView19"
-            app:layout_constraintTop_toBottomOf="@+id/imageView28" />
-
-        <ImageView
-            android:id="@+id/imageView210"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView110"
-            app:layout_constraintTop_toBottomOf="@+id/imageView29" />
-
-        <ImageView
-            android:id="@+id/imageView00"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/imageView01"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="16dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView00" />
-
-        <ImageView
-            android:id="@+id/imageView02"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="16dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView01" />
-
-        <ImageView
-            android:id="@+id/imageView03"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="16dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView02" />
-
-        <ImageView
-            android:id="@+id/imageView04"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="16dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView03" />
-
-        <ImageView
-            android:id="@+id/imageView05"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="16dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView04" />
-
-        <ImageView
-            android:id="@+id/imageView06"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="16dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView05" />
-
-        <ImageView
-            android:id="@+id/imageView07"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="16dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView06" />
-
-        <ImageView
-            android:id="@+id/imageView08"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="16dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView07" />
-
-        <ImageView
-            android:id="@+id/imageView09"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="16dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView08" />
-
-        <ImageView
-            android:id="@+id/imageView010"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="16dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView09" />
-
-        <ImageView
-            android:id="@+id/imageView10"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="16dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView00"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/imageView11"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView01"
-            app:layout_constraintTop_toBottomOf="@+id/imageView10" />
-
-        <ImageView
-            android:id="@+id/imageView12"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView02"
-            app:layout_constraintTop_toBottomOf="@+id/imageView11" />
-
-        <ImageView
-            android:id="@+id/imageView13"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView03"
-            app:layout_constraintTop_toBottomOf="@+id/imageView12" />
-
-        <ImageView
-            android:id="@+id/imageView14"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView04"
-            app:layout_constraintTop_toBottomOf="@+id/imageView13" />
-
-        <ImageView
-            android:id="@+id/imageView15"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView05"
-            app:layout_constraintTop_toBottomOf="@+id/imageView14" />
-
-        <ImageView
-            android:id="@+id/imageView16"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView06"
-            app:layout_constraintTop_toBottomOf="@+id/imageView15" />
-
-        <ImageView
-            android:id="@+id/imageView17"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView07"
-            app:layout_constraintTop_toBottomOf="@+id/imageView16" />
-
-        <ImageView
-            android:id="@+id/imageView18"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView08"
-            app:layout_constraintTop_toBottomOf="@+id/imageView17" />
-
-        <ImageView
-            android:id="@+id/imageView19"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView09"
-            app:layout_constraintTop_toBottomOf="@+id/imageView18" />
-
-        <ImageView
-            android:id="@+id/imageView110"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/emptyfieldtexture"
-            app:layout_constraintStart_toEndOf="@+id/imageView010"
-            app:layout_constraintTop_toBottomOf="@+id/imageView19" />
-
-
-        <ImageView
-            android:id="@+id/block0"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_weight="1"
-            android:src="@drawable/red1"
-            app:layout_constraintBottom_toTopOf="@+id/rotateLeft"
-            app:layout_constraintEnd_toStartOf="@+id/rightButton"
-            app:layout_constraintStart_toEndOf="@+id/leftButton"
-            app:layout_constraintTop_toBottomOf="@+id/rotateRight" />
-
-        <Button
-            android:id="@+id/rightButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:onClick="setActiveBlock"
-            android:text="@string/next"
-            app:layout_constraintBottom_toTopOf="@+id/readyButton"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tableRow" />
-
-        <Button
-            android:id="@+id/leftButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:onClick="setActiveBlock"
-            android:text="@string/previous"
-            app:layout_constraintBottom_toTopOf="@+id/readyButton"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/rotateRight" />
-
-        <TableRow
-            android:id="@+id/tableRow"
-            android:layout_width="wrap_content"
-            android:layout_height="18dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView510">
-
-                <TextView
-                    android:id="@+id/pointsRed"
-                    android:layout_width="70dp"
-                    android:layout_height="match_parent"
-                    android:background="@color/red"
-                    android:text="0"
-                    android:textAlignment="center" />
-
-                <TextView
-                    android:id="@+id/pointsBlue"
-                    android:layout_width="70dp"
-                    android:layout_height="match_parent"
-                    android:background="@color/blue"
-                    android:text="0"
-                    android:textAlignment="center" />
-
-                <TextView
-                    android:id="@+id/pointsYellow"
-                    android:layout_width="70dp"
-                    android:layout_height="match_parent"
-                    android:background="@color/yellow"
-                    android:text="0"
-                    android:textAlignment="center" />
-
-                <TextView
-                    android:id="@+id/pointsGreen"
-                    android:layout_width="70dp"
-                    android:layout_height="match_parent"
-                    android:background="@color/green"
-                    android:text="0"
-                    android:textAlignment="center" />
-        </TableRow>
-
-        <Button
-            android:id="@+id/passButton"
-            android:layout_width="62dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginBottom="8dp"
-            android:onClick="pass"
-            android:text="@string/pass"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <Button
-            android:id="@+id/readyButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:onClick="nextPlayer"
-            android:text="@string/ready"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/passButton"
-            tools:ignore="MissingConstraints" />
-
-        <Button
-            android:id="@+id/rotateRight"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:onClick="rotate"
-            android:text="Button"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tableRow" />
-
-        <Button
-            android:id="@+id/rotateLeft"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:onClick="rotate"
-            android:text="Button"
-            app:layout_constraintBottom_toTopOf="@+id/readyButton"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+    <ImageView
+        android:id="@+id/imageView103"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView93"
+        app:layout_constraintTop_toBottomOf="@+id/imageView102" />
+
+    <ImageView
+        android:id="@+id/imageView102"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView92"
+        app:layout_constraintTop_toBottomOf="@+id/imageView101" />
+
+    <ImageView
+        android:id="@+id/imageView105"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView95"
+        app:layout_constraintTop_toBottomOf="@+id/imageView104" />
+
+    <ImageView
+        android:id="@+id/imageView104"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView94"
+        app:layout_constraintTop_toBottomOf="@+id/imageView103" />
+
+    <ImageView
+        android:id="@+id/imageView106"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView96"
+        app:layout_constraintTop_toBottomOf="@+id/imageView105" />
+
+    <ImageView
+        android:id="@+id/imageView108"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView98"
+        app:layout_constraintTop_toBottomOf="@+id/imageView107" />
+
+    <ImageView
+        android:id="@+id/imageView1010"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView910"
+        app:layout_constraintTop_toBottomOf="@+id/imageView109" />
+
+    <ImageView
+        android:id="@+id/imageView107"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView97"
+        app:layout_constraintTop_toBottomOf="@+id/imageView106" />
+
+    <ImageView
+        android:id="@+id/imageView109"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView99"
+        app:layout_constraintTop_toBottomOf="@+id/imageView108" />
+
+    <ImageView
+        android:id="@+id/imageView100"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView90"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView101"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView91"
+        app:layout_constraintTop_toBottomOf="@+id/imageView100" />
+
+    <ImageView
+        android:id="@+id/imageView98"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView88"
+        app:layout_constraintTop_toBottomOf="@+id/imageView97" />
+
+    <ImageView
+        android:id="@+id/imageView97"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView87"
+        app:layout_constraintTop_toBottomOf="@+id/imageView96" />
+
+    <ImageView
+        android:id="@+id/imageView99"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView89"
+        app:layout_constraintTop_toBottomOf="@+id/imageView98" />
+
+    <ImageView
+        android:id="@+id/imageView910"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView810"
+        app:layout_constraintTop_toBottomOf="@+id/imageView99" />
+
+    <ImageView
+        android:id="@+id/imageView96"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView86"
+        app:layout_constraintTop_toBottomOf="@+id/imageView95" />
+
+    <ImageView
+        android:id="@+id/imageView95"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView85"
+        app:layout_constraintTop_toBottomOf="@+id/imageView94" />
+
+    <ImageView
+        android:id="@+id/imageView93"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView83"
+        app:layout_constraintTop_toBottomOf="@+id/imageView92" />
+
+    <ImageView
+        android:id="@+id/imageView94"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView84"
+        app:layout_constraintTop_toBottomOf="@+id/imageView93" />
+
+    <ImageView
+        android:id="@+id/imageView90"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView80"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView91"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView81"
+        app:layout_constraintTop_toBottomOf="@+id/imageView90" />
+
+    <ImageView
+        android:id="@+id/imageView92"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView82"
+        app:layout_constraintTop_toBottomOf="@+id/imageView91" />
+
+    <ImageView
+        android:id="@+id/imageView86"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView76"
+        app:layout_constraintTop_toBottomOf="@+id/imageView85" />
+
+    <ImageView
+        android:id="@+id/imageView83"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView73"
+        app:layout_constraintTop_toBottomOf="@+id/imageView82" />
+
+    <ImageView
+        android:id="@+id/imageView810"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView710"
+        app:layout_constraintTop_toBottomOf="@+id/imageView89" />
+
+    <ImageView
+        android:id="@+id/imageView81"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView71"
+        app:layout_constraintTop_toBottomOf="@+id/imageView80" />
+
+    <ImageView
+        android:id="@+id/imageView82"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView72"
+        app:layout_constraintTop_toBottomOf="@+id/imageView81" />
+
+    <ImageView
+        android:id="@+id/imageView88"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView78"
+        app:layout_constraintTop_toBottomOf="@+id/imageView87" />
+
+    <ImageView
+        android:id="@+id/imageView80"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView70"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView84"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView74"
+        app:layout_constraintTop_toBottomOf="@+id/imageView83" />
+
+    <ImageView
+        android:id="@+id/imageView85"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView75"
+        app:layout_constraintTop_toBottomOf="@+id/imageView84" />
+
+    <ImageView
+        android:id="@+id/imageView87"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView77"
+        app:layout_constraintTop_toBottomOf="@+id/imageView86" />
+
+    <ImageView
+        android:id="@+id/imageView89"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView79"
+        app:layout_constraintTop_toBottomOf="@+id/imageView88" />
+
+    <ImageView
+        android:id="@+id/imageView74"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView64"
+        app:layout_constraintTop_toBottomOf="@+id/imageView73" />
+
+    <ImageView
+        android:id="@+id/imageView71"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView61"
+        app:layout_constraintTop_toBottomOf="@+id/imageView70" />
+
+    <ImageView
+        android:id="@+id/imageView77"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView67"
+        app:layout_constraintTop_toBottomOf="@+id/imageView76" />
+
+    <ImageView
+        android:id="@+id/imageView72"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView62"
+        app:layout_constraintTop_toBottomOf="@+id/imageView71" />
+
+    <ImageView
+        android:id="@+id/imageView710"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView610"
+        app:layout_constraintTop_toBottomOf="@+id/imageView79" />
+
+    <ImageView
+        android:id="@+id/imageView73"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView63"
+        app:layout_constraintTop_toBottomOf="@+id/imageView72" />
+
+    <ImageView
+        android:id="@+id/imageView70"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView60"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView78"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView68"
+        app:layout_constraintTop_toBottomOf="@+id/imageView77" />
+
+    <ImageView
+        android:id="@+id/imageView75"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView65"
+        app:layout_constraintTop_toBottomOf="@+id/imageView74" />
+
+    <ImageView
+        android:id="@+id/imageView76"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView66"
+        app:layout_constraintTop_toBottomOf="@+id/imageView75" />
+
+    <ImageView
+        android:id="@+id/imageView79"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView69"
+        app:layout_constraintTop_toBottomOf="@+id/imageView78" />
+
+    <ImageView
+        android:id="@+id/imageView63"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView53"
+        app:layout_constraintTop_toBottomOf="@+id/imageView62" />
+
+    <ImageView
+        android:id="@+id/imageView60"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView50"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView69"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView59"
+        app:layout_constraintTop_toBottomOf="@+id/imageView68" />
+
+    <ImageView
+        android:id="@+id/imageView610"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView510"
+        app:layout_constraintTop_toBottomOf="@+id/imageView69" />
+
+    <ImageView
+        android:id="@+id/imageView64"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView54"
+        app:layout_constraintTop_toBottomOf="@+id/imageView63" />
+
+    <ImageView
+        android:id="@+id/imageView66"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView56"
+        app:layout_constraintTop_toBottomOf="@+id/imageView65" />
+
+    <ImageView
+        android:id="@+id/imageView68"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView58"
+        app:layout_constraintTop_toBottomOf="@+id/imageView67" />
+
+    <ImageView
+        android:id="@+id/imageView65"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView55"
+        app:layout_constraintTop_toBottomOf="@+id/imageView64" />
+
+    <ImageView
+        android:id="@+id/imageView67"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView57"
+        app:layout_constraintTop_toBottomOf="@+id/imageView66" />
+
+    <ImageView
+        android:id="@+id/imageView61"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView51"
+        app:layout_constraintTop_toBottomOf="@+id/imageView60" />
+
+    <ImageView
+        android:id="@+id/imageView62"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView52"
+        app:layout_constraintTop_toBottomOf="@+id/imageView61" />
+
+    <ImageView
+        android:id="@+id/imageView58"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView48"
+        app:layout_constraintTop_toBottomOf="@+id/imageView57" />
+
+    <ImageView
+        android:id="@+id/imageView55"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView45"
+        app:layout_constraintTop_toBottomOf="@+id/imageView54" />
+
+    <ImageView
+        android:id="@+id/imageView52"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView42"
+        app:layout_constraintTop_toBottomOf="@+id/imageView51" />
+
+    <ImageView
+        android:id="@+id/imageView57"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView47"
+        app:layout_constraintTop_toBottomOf="@+id/imageView56" />
+
+    <ImageView
+        android:id="@+id/imageView53"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView43"
+        app:layout_constraintTop_toBottomOf="@+id/imageView52" />
+
+    <ImageView
+        android:id="@+id/imageView56"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView46"
+        app:layout_constraintTop_toBottomOf="@+id/imageView55" />
+
+    <ImageView
+        android:id="@+id/imageView51"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView41"
+        app:layout_constraintTop_toBottomOf="@+id/imageView50" />
+
+    <ImageView
+        android:id="@+id/imageView50"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView40"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView59"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView49"
+        app:layout_constraintTop_toBottomOf="@+id/imageView58" />
+
+    <ImageView
+        android:id="@+id/imageView510"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView410"
+        app:layout_constraintTop_toBottomOf="@+id/imageView59" />
+
+    <ImageView
+        android:id="@+id/imageView54"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView44"
+        app:layout_constraintTop_toBottomOf="@+id/imageView53" />
+
+    <ImageView
+        android:id="@+id/imageView47"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView37"
+        app:layout_constraintTop_toBottomOf="@+id/imageView46" />
+
+    <ImageView
+        android:id="@+id/imageView41"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView31"
+        app:layout_constraintTop_toBottomOf="@+id/imageView40" />
+
+    <ImageView
+        android:id="@+id/imageView49"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView39"
+        app:layout_constraintTop_toBottomOf="@+id/imageView48" />
+
+    <ImageView
+        android:id="@+id/imageView45"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView35"
+        app:layout_constraintTop_toBottomOf="@+id/imageView44" />
+
+    <ImageView
+        android:id="@+id/imageView40"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView30"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView410"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView310"
+        app:layout_constraintTop_toBottomOf="@+id/imageView49" />
+
+    <ImageView
+        android:id="@+id/imageView44"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView34"
+        app:layout_constraintTop_toBottomOf="@+id/imageView43" />
+
+    <ImageView
+        android:id="@+id/imageView43"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView33"
+        app:layout_constraintTop_toBottomOf="@+id/imageView42" />
+
+    <ImageView
+        android:id="@+id/imageView46"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView36"
+        app:layout_constraintTop_toBottomOf="@+id/imageView45" />
+
+    <ImageView
+        android:id="@+id/imageView48"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView38"
+        app:layout_constraintTop_toBottomOf="@+id/imageView47" />
+
+    <ImageView
+        android:id="@+id/imageView42"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView32"
+        app:layout_constraintTop_toBottomOf="@+id/imageView41" />
+
+    <ImageView
+        android:id="@+id/imageView30"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView20"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView31"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView21"
+        app:layout_constraintTop_toBottomOf="@+id/imageView30" />
+
+    <ImageView
+        android:id="@+id/imageView32"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView22"
+        app:layout_constraintTop_toBottomOf="@+id/imageView31" />
+
+    <ImageView
+        android:id="@+id/imageView33"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView23"
+        app:layout_constraintTop_toBottomOf="@+id/imageView32" />
+
+    <ImageView
+        android:id="@+id/imageView34"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView24"
+        app:layout_constraintTop_toBottomOf="@+id/imageView33" />
+
+    <ImageView
+        android:id="@+id/imageView35"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView25"
+        app:layout_constraintTop_toBottomOf="@+id/imageView34" />
+
+    <ImageView
+        android:id="@+id/imageView36"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView26"
+        app:layout_constraintTop_toBottomOf="@+id/imageView35" />
+
+    <ImageView
+        android:id="@+id/imageView37"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView27"
+        app:layout_constraintTop_toBottomOf="@+id/imageView36" />
+
+    <ImageView
+        android:id="@+id/imageView38"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView28"
+        app:layout_constraintTop_toBottomOf="@+id/imageView37" />
+
+    <ImageView
+        android:id="@+id/imageView39"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView29"
+        app:layout_constraintTop_toBottomOf="@+id/imageView38" />
+
+    <ImageView
+        android:id="@+id/imageView310"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView210"
+        app:layout_constraintTop_toBottomOf="@+id/imageView39" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView10"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView21"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView11"
+        app:layout_constraintTop_toBottomOf="@+id/imageView20" />
+
+    <ImageView
+        android:id="@+id/imageView22"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView12"
+        app:layout_constraintTop_toBottomOf="@+id/imageView21" />
+
+    <ImageView
+        android:id="@+id/imageView23"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView13"
+        app:layout_constraintTop_toBottomOf="@+id/imageView22" />
+
+    <ImageView
+        android:id="@+id/imageView24"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView14"
+        app:layout_constraintTop_toBottomOf="@+id/imageView23" />
+
+    <ImageView
+        android:id="@+id/imageView25"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView15"
+        app:layout_constraintTop_toBottomOf="@+id/imageView24" />
+
+    <ImageView
+        android:id="@+id/imageView26"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView16"
+        app:layout_constraintTop_toBottomOf="@+id/imageView25" />
+
+    <ImageView
+        android:id="@+id/imageView27"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView17"
+        app:layout_constraintTop_toBottomOf="@+id/imageView26" />
+
+    <ImageView
+        android:id="@+id/imageView28"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView18"
+        app:layout_constraintTop_toBottomOf="@+id/imageView27" />
+
+    <ImageView
+        android:id="@+id/imageView29"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView19"
+        app:layout_constraintTop_toBottomOf="@+id/imageView28" />
+
+    <ImageView
+        android:id="@+id/imageView210"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView110"
+        app:layout_constraintTop_toBottomOf="@+id/imageView29" />
+
+    <ImageView
+        android:id="@+id/imageView00"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView01"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView00" />
+
+    <ImageView
+        android:id="@+id/imageView02"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView01" />
+
+    <ImageView
+        android:id="@+id/imageView03"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView02" />
+
+    <ImageView
+        android:id="@+id/imageView04"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView03" />
+
+    <ImageView
+        android:id="@+id/imageView05"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView04" />
+
+    <ImageView
+        android:id="@+id/imageView06"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView05" />
+
+    <ImageView
+        android:id="@+id/imageView07"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView06" />
+
+    <ImageView
+        android:id="@+id/imageView08"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView07" />
+
+    <ImageView
+        android:id="@+id/imageView09"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView08" />
+
+    <ImageView
+        android:id="@+id/imageView010"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView09" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView00"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView01"
+        app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView02"
+        app:layout_constraintTop_toBottomOf="@+id/imageView11" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView03"
+        app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView04"
+        app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView05"
+        app:layout_constraintTop_toBottomOf="@+id/imageView14" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView06"
+        app:layout_constraintTop_toBottomOf="@+id/imageView15" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView07"
+        app:layout_constraintTop_toBottomOf="@+id/imageView16" />
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView08"
+        app:layout_constraintTop_toBottomOf="@+id/imageView17" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView09"
+        app:layout_constraintTop_toBottomOf="@+id/imageView18" />
+
+    <ImageView
+        android:id="@+id/imageView110"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/emptyfieldtexture"
+        app:layout_constraintStart_toEndOf="@+id/imageView010"
+        app:layout_constraintTop_toBottomOf="@+id/imageView19" />
+
+
+    <ImageView
+        android:id="@+id/block0"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="1"
+        android:alpha="0.7"
+        android:src="@drawable/red1"
+        app:layout_constraintBottom_toTopOf="@+id/readyButton"
+        app:layout_constraintEnd_toStartOf="@+id/rightButton"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toEndOf="@+id/leftButton"
+        app:layout_constraintTop_toBottomOf="@+id/tableRow"
+        app:layout_constraintVertical_bias="0.595" />
+
+    <Button
+        android:id="@+id/rightButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="setActiveBlock"
+        android:text="@string/next"
+        app:layout_constraintBottom_toTopOf="@+id/readyButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rotateLeft" />
+
+    <Button
+        android:id="@+id/leftButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="setActiveBlock"
+        android:text="@string/previous"
+        app:layout_constraintBottom_toTopOf="@+id/readyButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rotateRight" />
+
+    <TableRow
+        android:id="@+id/tableRow"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView510">
+
+        <TextView
+            android:id="@+id/pointsRed"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:background="@color/red"
+            android:text="0"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/pointsBlue"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:background="@color/blue"
+            android:text="0"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/pointsYellow"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:background="@color/yellow"
+            android:text="0"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/pointsGreen"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:background="@color/green"
+            android:text="0"
+            android:textAlignment="center" />
+    </TableRow>
+
+    <Button
+        android:id="@+id/passButton"
+        android:layout_width="62dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="pass"
+        android:text="@string/pass"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/readyButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="nextPlayer"
+        android:text="@string/done"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/passButton"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/rotateRight"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="rotate"
+        android:text="@string/rotate_right"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableRow" />
+
+    <Button
+        android:id="@+id/rotateLeft"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="rotate"
+        android:text="@string/rotate_left"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableRow" />
 
 
 </android.support.constraint.ConstraintLayout>

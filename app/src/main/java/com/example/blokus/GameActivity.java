@@ -52,6 +52,10 @@ public class GameActivity extends AppCompatActivity implements View.OnTouchListe
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        Window window = getWindow();
+        toolbar.setBackgroundColor(getResources().getColor(R.color.red));
+        window.setStatusBarColor(getResources().getColor(R.color.red));
+
         View game = findViewById(R.id.game_layout);
         game.setOnTouchListener(this);
 
@@ -87,20 +91,20 @@ public class GameActivity extends AppCompatActivity implements View.OnTouchListe
         ImageView block = findViewById(R.id.block0);
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         int width = displayMetrics.widthPixels;
-
         int widthBlock = block.getMeasuredWidth();
         int heightBlock = block.getMeasuredHeight();
 
-        block.setX(width/2);
-        block.setY(findViewById(R.id.rightButton).getY());
+        block.setX(width/2 - widthBlock/2);
+        block.setY(findViewById(R.id.rightButton).getY() + findViewById(R.id.rightButton).getHeight()/2 - heightBlock/2);
         block.animate()
-                .x(block.getX() - widthBlock)
-                .y(block.getY() - heightBlock)
+                .x(width/2 - widthBlock/2)
+                .y(findViewById(R.id.rightButton).getY() + findViewById(R.id.rightButton).getHeight()/2 - heightBlock/2)
                 .setDuration(0)
                 .start();
 
         setSize(currBlockId);
         block.setImageResource(getResources().getIdentifier(currPlayer + (currBlockId + 1), "drawable", getPackageName()));
+
     }
 
     public void changeLeft(Player player){
@@ -147,6 +151,7 @@ public class GameActivity extends AppCompatActivity implements View.OnTouchListe
     }
 
     public boolean collision(int currentBlockId, Field field){
+        if(currentField == null) return false;
         ArrayList neighbourX = new ArrayList();
         ArrayList neighbourY = new ArrayList();
         ArrayList blocks = setPos(currentBlockId, rotation);
@@ -167,7 +172,12 @@ public class GameActivity extends AppCompatActivity implements View.OnTouchListe
 
             }
         }
-
+        for(int i=0; i<neighbourX.size(); i++) {
+            if((field.getPositionX() + (int) neighbourX.get(i)) < 0 || (field.getPositionX() + (int) neighbourX.get(i)) > 10
+                    || (field.getPositionY() + (int) neighbourY.get(i)) < 0 || (field.getPositionY() + (int) neighbourY.get(i)) > 10) return false;
+            if(bigField.checkEmpty(field.getPositionX() + (int) neighbourX.get(i), field.getPositionY() + (int) neighbourY.get(i))) continue;
+            else return false;
+        }
         int x;
         int y;
         boolean isOk = false;
@@ -185,17 +195,12 @@ public class GameActivity extends AppCompatActivity implements View.OnTouchListe
             if(x-1 >= 0 && y-1 >= 0 && bigField.getFields(x-1, y-1).color == currPlayer) isOk = true;
             if(x-1 >= 0 && y+1 < 11 && bigField.getFields(x-1, y+1).color == currPlayer) isOk = true;
             if(x+1 < 11 && y-1 >= 0 && bigField.getFields(x+1, y-1).color == currPlayer) isOk = true;
-            if(x+1 < 11 && y+1 < 11 && bigField.getFields(x+1, y+1).color == currPlayer) {Log.v("PPPPPPPPPPPP", "LEEEL"); isOk = true;}
+            if(x+1 < 11 && y+1 < 11 && bigField.getFields(x+1, y+1).color == currPlayer) isOk = true;
 
         }
 
         if(!isOk) return false;
-        for(int i=0; i<neighbourX.size(); i++) {
-            if((field.getPositionX() + (int) neighbourX.get(i)) < 0 || (field.getPositionX() + (int) neighbourX.get(i)) > 10
-                    || (field.getPositionY() + (int) neighbourY.get(i)) < 0 || (field.getPositionY() + (int) neighbourY.get(i)) > 10) return false;
-            if(bigField.checkEmpty(field.getPositionX() + (int) neighbourX.get(i), field.getPositionY() + (int) neighbourY.get(i))) continue;
-            else return false;
-        }
+
         return true;
     }
 
@@ -223,9 +228,6 @@ public class GameActivity extends AppCompatActivity implements View.OnTouchListe
         }
 
         for(int i=0; i<blocks.size(); i++) {
-            Log.v("ustawiamX: ", Integer.toString(field.getPositionX() + (int) neighbourX.get(i)));
-            Log.v("ustawiamY: ", Integer.toString(field.getPositionY() + (int) neighbourY.get(i)));
-
             bigField.setEmpty(field.getPositionX() + (int) neighbourX.get(i), field.getPositionY() + (int) neighbourY.get(i), currPlayer);
             String paint = "imageView" + (field.getPositionX() + (int) neighbourX.get(i)) + (field.getPositionY() + (int) neighbourY.get(i));
             int imageViewId = getResources().getIdentifier(paint, "id", getPackageName());
@@ -312,13 +314,15 @@ public class GameActivity extends AppCompatActivity implements View.OnTouchListe
                 currPlayer = playerColors[playerId];
                 if (!players[i].finish) break;
                 i++;
+                if(i == 4){currPlayer = player.color; i = 0; break;}
+
             }
 
             block.setRotation(block.getRotation()- rotation);
             rotation = 0;
             currBlockId = 0;
-            if (!nextPlayer.blocks[currBlockId]) {
-                while (currBlockId != 7 && !nextPlayer.blocks[currBlockId + 1]) currBlockId++;
+            if (!players[i].blocks[currBlockId]) {
+                while (currBlockId != 7 && !players[i].blocks[currBlockId + 1]) currBlockId++;
                 if (currBlockId != 7) currBlockId++;
             }
 
@@ -354,22 +358,22 @@ public class GameActivity extends AppCompatActivity implements View.OnTouchListe
 
         float clickX = event.getX();
         float clickY = event.getY();
+        float []correction = {0, 0};
 
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
 
                 break;
             case MotionEvent.ACTION_MOVE:
+                if(rotation == 90 || rotation == 270) correction = setCorrection(currBlockId);
                 activeBlockImg.animate()
-                        .x(clickX - 15 * displayMetrics.density)
-                        .y(clickY - 15 * displayMetrics.density)
+                        .x(clickX - 15 * displayMetrics.density + correction[0])
+                        .y(clickY - 15 * displayMetrics.density+ correction[1])
                         .setDuration(0)
                         .start();
                 break;
             case MotionEvent.ACTION_UP:
                 currentField = bigField.searchField(clickX, clickY, currBlockId);
-                Log.v("5555555", currentField. color);
-                float []correction = {0, 0};
                 if(rotation == 90 || rotation == 270) correction = setCorrection(currBlockId);
                 if (currentField != null) {
                     activeBlockImg.setX(currentField.getTopLeftX() + correction[0]);
@@ -434,7 +438,28 @@ public class GameActivity extends AppCompatActivity implements View.OnTouchListe
             pointsYellow.setText(Integer.toString(yellow.points));
             pointsGreen.setText(Integer.toString(green.points));
 
+            ImageView block = findViewById(R.id.block0);
+            getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+            int width = displayMetrics.widthPixels;
+            int widthBlock = block.getMeasuredWidth();
+            int heightBlock = block.getMeasuredHeight();
+
+            block.setAlpha((float)0.7);
+            block.setX(width/2 - widthBlock/2);
+            block.setY(findViewById(R.id.rightButton).getY() + findViewById(R.id.rightButton).getHeight()/2 - heightBlock/2);
+            block.animate()
+                    .x(width/2 - widthBlock/2)
+                    .y(findViewById(R.id.rightButton).getY() + findViewById(R.id.rightButton).getHeight()/2 - heightBlock/2)
+                    .setDuration(0)
+                    .start();
+
         }
+        else  if(bigField.getFields(0,0).isEmpty || bigField.getFields(0,10).isEmpty ||
+                bigField.getFields(10,0).isEmpty || bigField.getFields(10,10).isEmpty )
+                    Snackbar.make(view, "Place the block in the corner ", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            else Snackbar.make(view, "Position is wrong", Snackbar.LENGTH_LONG)
+                .setAction("Action", null).show();
     }
 
     public void pass(View view) {
@@ -442,7 +467,7 @@ public class GameActivity extends AppCompatActivity implements View.OnTouchListe
             case "red": red.finish = true; changePlayer(red, blue, yellow, green); break;
             case "blue": blue.finish = true; changePlayer(blue, yellow, green, red); break;
             case "yellow": yellow.finish = true;  changePlayer(yellow, green, red, blue); break;
-            case "green": green.finish = true;  changePlayer(yellow, green, blue, yellow); break;
+            case "green": green.finish = true;  changePlayer(green, red, blue, yellow); break;
         }
     }
 
@@ -461,12 +486,18 @@ public class GameActivity extends AppCompatActivity implements View.OnTouchListe
                         break;
                 }
         float []correction = {0, 0};
+
+        getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+        int width = displayMetrics.widthPixels;
+        int widthBlock = block.getMeasuredWidth();
+        int heightBlock = block.getMeasuredHeight();
+
         if(rotation == 90 || rotation == 270) correction = setCorrection(currBlockId);
-        block.setX(currentField.getTopLeftX() + correction[0]);
-        block.setY(currentField.getTopLeftY() + correction[1]);
+        block.setX(width/2 - widthBlock/2);
+        block.setY(findViewById(R.id.rightButton).getY() + findViewById(R.id.rightButton).getHeight()/2 - heightBlock/2);
         block.animate()
-                .x(currentField.getTopLeftX() + correction[0])
-                .y(currentField.getTopLeftY() + correction[1])
+                .x(width/2 - widthBlock/2)
+                .y(findViewById(R.id.rightButton).getY() + findViewById(R.id.rightButton).getHeight()/2 - heightBlock/2)
                 .setDuration(0)
                 .start();
     }
@@ -476,22 +507,22 @@ public class GameActivity extends AppCompatActivity implements View.OnTouchListe
         switch (blockId){
             case 0: break;
             case 1:
-                xy[0] = currentField.getWidth()/2 * displayMetrics.density;
-                xy[1] = -currentField.getHeight()/2 * displayMetrics.density;
+                xy[0] = 15 * displayMetrics.density;
+                xy[1] = -15 * displayMetrics.density;
                 return xy;
             case 2: break;
             case 3:
-                xy[0] = currentField.getWidth()/2 * displayMetrics.density;
-                xy[1] = -currentField.getHeight()/2 * displayMetrics.density;
+                xy[0] = 15 * displayMetrics.density;
+                xy[1] = -15 * displayMetrics.density;
                 return xy;
             case 4: break;
             case 5:
-                xy[0] = 3*currentField.getWidth()/2 * displayMetrics.density;
-                xy[1] = -3*currentField.getHeight()/2 * displayMetrics.density;
+                xy[0] = 3*15 * displayMetrics.density;
+                xy[1] = -3*15 * displayMetrics.density;
                 break;
             case 6:
-                xy[0] = -currentField.getWidth()/2 * displayMetrics.density;
-                xy[1] = currentField.getHeight()/2 * displayMetrics.density;
+                xy[0] = -15 * displayMetrics.density;
+                xy[1] = 15 * displayMetrics.density;
                 break;
             case 7:
         }
