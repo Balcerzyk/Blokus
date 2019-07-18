@@ -2,7 +2,6 @@ package com.example.blokus;
 
 import android.content.res.Resources;
 import android.util.DisplayMetrics;
-import android.util.Log;
 
 public class Field {
     private int positionX;

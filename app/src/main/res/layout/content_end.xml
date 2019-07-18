@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".EndActivity"
-    tools:showIn="@layout/activity_end">
+    tools:showIn="@layout/activity_end"
+    android:screenOrientation="portrait">
 
     <TextView
         android:id="@+id/champion"

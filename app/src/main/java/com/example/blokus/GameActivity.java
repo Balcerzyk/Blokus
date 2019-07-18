@@ -1,25 +1,16 @@
 package com.example.blokus;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Resources;
-import android.graphics.Color;
-import android.graphics.ColorSpace;
-import android.graphics.drawable.Drawable;
-import android.media.Image;
 import android.os.Bundle;
-import android.support.constraint.ConstraintLayout;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -373,7 +364,7 @@ public class GameActivity extends AppCompatActivity implements View.OnTouchListe
                         .start();
                 break;
             case MotionEvent.ACTION_UP:
-                currentField = bigField.searchField(clickX, clickY, currBlockId);
+                currentField = bigField.searchField(clickX, clickY);
                 if(rotation == 90 || rotation == 270) correction = setCorrection(currBlockId);
                 if (currentField != null) {
                     activeBlockImg.setX(currentField.getTopLeftX() + correction[0]);
@@ -485,14 +476,13 @@ public class GameActivity extends AppCompatActivity implements View.OnTouchListe
                         if(rotation == -90) rotation = 270;
                         break;
                 }
-        float []correction = {0, 0};
 
         getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         int width = displayMetrics.widthPixels;
         int widthBlock = block.getMeasuredWidth();
         int heightBlock = block.getMeasuredHeight();
 
-        if(rotation == 90 || rotation == 270) correction = setCorrection(currBlockId);
+        if(rotation == 90 || rotation == 270)
         block.setX(width/2 - widthBlock/2);
         block.setY(findViewById(R.id.rightButton).getY() + findViewById(R.id.rightButton).getHeight()/2 - heightBlock/2);
         block.animate()

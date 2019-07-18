@@ -1,11 +1,5 @@
 package com.example.blokus;
 
-import android.content.res.Resources;
-import android.support.constraint.ConstraintLayout;
-import android.util.DisplayMetrics;
-import android.util.Log;
-import android.view.Display;
-import android.widget.ImageView;
 
 public class BigField {
     private Field [][] fields = new Field[11][11];
@@ -18,7 +12,7 @@ public class BigField {
         }
     }
 
-    public Field searchField(float x, float y, int blockId){
+    public Field searchField(float x, float y){
 
         if(y > fields[10][10].getTopLeftY() + 200) return null;
         for(int i = 0; i <= 10; i++){
@@ -31,11 +25,6 @@ public class BigField {
         return null;
     }
 
-    public void setEmpty(Field field, String playerColor){
-        field.isEmpty = false;
-        field.color = playerColor;
-
-    }
     public void setEmpty(int x, int y, String playerColor){
         fields[x][y].isEmpty = false;
         fields[x][y].color = playerColor;

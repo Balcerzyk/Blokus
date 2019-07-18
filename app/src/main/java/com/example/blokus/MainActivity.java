@@ -28,11 +28,15 @@ public class MainActivity extends AppCompatActivity {
                 switch(v.getId()){
                     case R.id.playButton:
                         Intent gameIntent = new Intent(MainActivity.this, GameActivity.class);
+                        gameIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(gameIntent);
+                        finish();
                         break;
                     case R.id.exitButton:
-                        finish();
-                        moveTaskToBack(true);
+                        finishAndRemoveTask();
+                        System.exit(0);
+
+
                         break;
                     default:;
                 }
